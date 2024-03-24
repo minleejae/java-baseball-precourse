@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class GameModel {
-    private final int[] numbers = new int[3];
+    private int[] numbers = new int[3];
     private boolean isGameInProgress;
 
     public void resetGame() {
@@ -49,6 +49,14 @@ public class GameModel {
             }
         }
         return false;
+    }
+
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] arr) {
+        this.numbers = arr.clone();
     }
 
     public boolean isGameInProgress() {
